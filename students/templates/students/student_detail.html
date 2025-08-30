@@ -1,0 +1,13 @@
+{% extends 'students/base.html' %}
+{% block content %}
+<div class="card">
+  <div class="card-body">
+    <h3 class="card-title">{{ object.name }}</h3>
+    <p><strong>Roll No:</strong> {{ object.roll_no }}</p>
+    <p><strong>Course:</strong> {{ object.course }}</p>
+    <p><strong>Age:</strong> {{ object.age }}</p>
+    <a href="{% url 'student-update' object.id %}" class="btn btn-warning">Edit</a>
+    <a href="{% url 'student-delete' object.id %}" class="btn btn-danger">Delete</a>
+  </div>
+</div>
+{% endblock %}

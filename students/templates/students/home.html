@@ -1,0 +1,8 @@
+{% extends 'students/base.html' %}
+{% block content %}
+<div class="text-center">
+  <h1 class="mb-4">Welcome to Student Record Manager</h1>
+  <a class="btn btn-primary" href="{% url 'student-list' %}">View All Students</a>
+  <a class="btn btn-success" href="{% url 'student-create' %}">Register New Student</a>
+</div>
+{% endblock %}
